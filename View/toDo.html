@@ -9,18 +9,18 @@
 </head>
     <div class="header1 d-flex justify-content-center"><h1>Add Your Todo List</h1></div>
     <div class="task d-flex mx-2"> 
-        <input class="w-100 border-none border-secondary mx-2" type="text" placeholder="Add New Task" id="taskInput">
-        <button type="button" id="addTask">+</button>
+        <input class="w-100 border-dark border-top-0 mx-2" type="text" placeholder="Add New Task" id="taskInput">
+        <button class="btn-info rounded-circle" type="button" id="addTask">+</button>
     </div>
     <div class="taskList">
         
     </div>
-    <div class="taskDetails">
-        <li><span id="taskLeft"></span> items left</li>
-        <li>All <span id="allTask"></span></li>
-        <li>Active <span id="activeTask"></span> </li>
-        <li> Completed <span id="completedTask"></span> </li>
-       <button id="clear">Clear All</button>
+    <div class="taskDetails d-flex my-4">
+        <li class="mx-3" style="list-style-type: none;"><span id="taskLeft"></span> items left</li>
+        <li class="mx-3" style="list-style-type: none;">All <span id="allTask" class="bg-danger text-white rounded-circle p-2"></span></li>
+        <li class="mx-3" style="list-style-type: none;">Active <span id="activeTask" class="bg-danger text-white rounded-circle p-2"></span> </li>
+        <li class="mx-3" style="list-style-type: none;"> Completed <span id="completedTask" class="bg-danger text-white rounded-circle p-2"></span> </li>
+        <button class="mx-3 d-flex align-items-end btn btn-outline-danger" id="clear">Clear All</button>
     </div>
     
     
