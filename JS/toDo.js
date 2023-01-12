@@ -113,14 +113,29 @@ const showTask= ()=>{
 }
 
  showTask();
+
+ document.querySelector("#taskInput").addEventListener("keypress", function(event) {
+
+    if (event.key === "Enter") {
+      document.getElementById("addTask").click();
+    }
+    })
+
 document.querySelector("#addTask").addEventListener("click", function(){
+    
     var taskValue=document.getElementById("taskInput").value
+    if(taskValue!==""){
     Tasks.push({value:taskValue,status:'Active'})
     localStorage.setItem('task', JSON.stringify(Tasks));
     document.getElementById("taskInput").value=""
     showTask();
+    }else{
+        alert("Please Enter a task");
+    }
 
 })
+
+
 
 document.querySelector('#clear').addEventListener("click", function(){
     Tasks.splice(0,Tasks.length);
